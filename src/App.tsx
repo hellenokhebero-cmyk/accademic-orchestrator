@@ -6,6 +6,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "@/providers/theme-provider";
 import Dashboard from "./pages/Dashboard";
 import Login from "./pages/Login";
+import InstitutionManagement from "./pages/InstitutionManagement";
+import CourseManagement from "./pages/CourseManagement";
+import StudentOversight from "./pages/StudentOversight";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -20,9 +23,9 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Dashboard />} />
             <Route path="/login" element={<Login />} />
-            <Route path="/institution" element={<Dashboard />} />
-            <Route path="/students" element={<Dashboard />} />
-            <Route path="/courses" element={<Dashboard />} />
+            <Route path="/institution" element={<InstitutionManagement />} />
+            <Route path="/students" element={<StudentOversight />} />
+            <Route path="/courses" element={<CourseManagement />} />
             <Route path="/staff" element={<Dashboard />} />
             <Route path="/communication" element={<Dashboard />} />
             <Route path="/events" element={<Dashboard />} />
